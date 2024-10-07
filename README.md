@@ -3,8 +3,7 @@
 Authors:
 
 * Samuel A. Rebelsky
-* Your Name Here
-* Your Name Here
+* Slok Rajbhandari
 
 The latest version of the CSC-207 lab on linear structures, now with Maven.
 
