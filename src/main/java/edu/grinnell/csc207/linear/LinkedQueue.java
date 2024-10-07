@@ -57,15 +57,26 @@ public class LinkedQueue<T> implements Queue<T> {
 
   @Override
   public void put(T val) throws Exception {
-    throw new Exception("Unimplemented");
+    Node<T> newNode = new Node<>(val, null);
+    if (isEmpty()) {
+        front = back = newNode;
+    } else {
+        back.next = newNode;
+        back = newNode;
+    }
   } // put(T)
 
   @Override
   public T get() throws Exception {
-    if (this.isEmpty()) {
-      throw new Exception("cannot get values from the empty queue");
-    } // if empty
-    throw new Exception("Unimplemented");
+    if (isEmpty()) {
+        throw new Exception("Queue is empty.");
+    }
+    T value = front.value;
+    front = front.next;
+    if (front == null) {
+        back = null;
+    }
+    return value;
   } // get()
 
   @Override
