@@ -54,7 +54,7 @@ public class ArrayBasedQueue<T> implements Queue<T> {
 
   @Override
   public boolean isEmpty() {
-    return this.size <= 0;
+    return this.size == 0;
   } // isEmpty()
 
   @Override
@@ -116,7 +116,7 @@ public class ArrayBasedQueue<T> implements Queue<T> {
    * Get the index of the back of the queue. The back is where we add the next element.
    */
   int back() {
-    return this.size;
+    return ((this.front + this.size) % this.values.length);
   } // back()
 
 } // class ArrayBasedQueue<T>
