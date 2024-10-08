@@ -4,6 +4,7 @@ Authors:
 
 * Samuel A. Rebelsky
 * Slok Rajbhandari
+* Yash Malik
 
 The latest version of the CSC-207 lab on linear structures, now with Maven.
 
